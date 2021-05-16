@@ -1,0 +1,39 @@
+.forecast-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: auto;
+  min-height: 17vh;
+  min-width: 80px;
+  padding: 1rem;
+  font-size: 1.7em;
+  text-align: center;
+  transition: transform 0.1s ease 0s;
+}
+
+.forecast-card:hover {
+  transform: scale(1.02);
+}
+
+.forecast-item-temp-min {
+  color: grey;
+}
+
+@media screen and (max-width: 970px) {
+  .forecast-card {
+    flex-direction: row;
+    min-height: 1vh;
+    font-size: 1.2em;
+  }
+
+  .forecast-item {
+    flex: 1 1 0;
+  }
+
+  .forecast-item-temp-min {
+    flex: 1 1 0;
+  }
+}
+
+/*# sourceMappingURL=forecast-item.component.css.map */

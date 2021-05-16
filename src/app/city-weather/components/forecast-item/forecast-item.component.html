@@ -1,0 +1,5 @@
+<mat-card class="mat-elevation-z8 forecast-card">
+  <div class="forecast-item">{{forecastDay.day}}</div>
+  <div class="forecast-item">H: {{forecastDay.temperatureMax | temperature | async}}&#176;</div>
+  <div class="forecast-item-temp-min">L: {{forecastDay.temperatureMin | temperature | async}}&#176;</div>
+</mat-card>

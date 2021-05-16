@@ -1,0 +1,25 @@
+.spinner {
+  text-align: center;
+  padding-top: 3rem;
+}
+
+.favorites {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(205px, 0.5fr));
+  grid-gap: 2rem;
+}
+
+@media screen and (max-width: 970px) {
+  .favorites {
+    padding: 1rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(205px, 0.5fr));
+    grid-gap: 0.5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .favorites {
+    grid-template-columns: repeat(auto-fit, minmax(205px, 1fr));
+  }
+}

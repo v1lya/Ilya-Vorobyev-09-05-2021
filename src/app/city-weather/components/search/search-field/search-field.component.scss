@@ -1,0 +1,20 @@
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-field {
+  width: 70vw;
+}
+
+
+.search-field:hover {
+
+}
+
+@media screen and (max-width: 970px) {
+  .search-field {
+    width: 80vw;
+  }
+}

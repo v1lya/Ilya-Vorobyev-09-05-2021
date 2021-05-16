@@ -1,0 +1,21 @@
+<app-loading-spinner *ngIf="isLoading$ | async" class="spinner"></app-loading-spinner>
+<mat-card *ngIf="!(isLoading$ | async)" class="mat-elevation-z8 search-result-card">
+  <img [src]="'/assets/icons/' + cityWeather.icon + '.png'" alt="" class="search-result-weatherIcon" draggable="false">
+  <span class="search-result-cityName">{{cityWeather.cityName}}</span>
+  <div *ngIf="cityWeather.temperature !== null" class="search-result-temp">
+    <div>{{cityWeather.temperature | temperature | async}}&#176;</div>
+    <div class="search-result-temp-type">{{temperatureUnit}}</div>
+  </div>
+  <div class="search-result-fabs">
+    <button class="search-result-button-temp" (click)="onToggleTemperatureUnit()" color="primary" mat-fab>
+      <mat-icon [matTooltip]="'Change to °' + nextTemperatureUnit">device_thermostat</mat-icon>
+      <span class="search-result-fab-temp">{{temperatureUnit}}</span>
+    </button>
+    <button (click)="onToggleCityFavorite()" color="primary" mat-fab>
+      <mat-icon *ngIf="isFavorite" matTooltip="Remove from Favorites">favorite</mat-icon>
+      <mat-icon *ngIf="!isFavorite" matTooltip="Add to Favorites">favorite_border</mat-icon>
+    </button>
+  </div>
+  <span class="search-result-weatherText">{{cityWeather.text}}</span>
+  <app-forecasts-list class="search-result-forecast"></app-forecasts-list>
+</mat-card>

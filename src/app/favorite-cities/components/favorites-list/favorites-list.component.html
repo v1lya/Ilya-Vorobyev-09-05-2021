@@ -1,0 +1,7 @@
+<app-loading-spinner *ngIf="isLoading$ | async" class="spinner"></app-loading-spinner>
+<div *ngIf="!(isLoading$ | async)" class="favorites">
+  <app-favorite-item
+    *ngFor="let cityWeather of favoriteCitiesCurrentWeather"
+    [favoriteCityWeather]="cityWeather">
+  </app-favorite-item>
+</div>

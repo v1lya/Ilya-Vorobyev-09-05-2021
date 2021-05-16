@@ -1,0 +1,9 @@
+.city-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  row-gap: 2rem;
+}
+
+/*# sourceMappingURL=city-weather.component.css.map */

@@ -1,0 +1,46 @@
+.favorite-item {
+  text-decoration: none;
+}
+
+.favorite-item-card {
+  min-height: 25vh;
+  min-width: 170px;
+  text-align: center;
+  padding: 1rem;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  transition: transform 0.4s ease 0s;
+}
+
+.favorite-item-card:hover {
+  transform: scale(1.07);
+}
+
+.favorite-item-cityName {
+  font-size: 1.7em;
+}
+
+.favorite-item-temp {
+  font-size: 4em;
+  margin: 1rem 0;
+}
+
+.favorite-item-weatherText {
+  font-size: 1.2em;
+}
+
+@media screen and (max-width: 970px) {
+  .favorite-item-card {
+    min-height: 17vh;
+  }
+
+  .favorite-item-cityName {
+    font-size: 1.3em;
+  }
+
+  .favorite-item-temp {
+    font-size: 3.5em;
+  }
+}

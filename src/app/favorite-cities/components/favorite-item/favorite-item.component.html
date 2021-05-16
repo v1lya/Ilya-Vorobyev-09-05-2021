@@ -1,0 +1,7 @@
+<a [routerLink]="[favoriteCityWeather.locationKey]" class="favorite-item">
+  <mat-card class="mat-elevation-z8 favorite-item-card">
+    <div class="favorite-item-cityName">{{favoriteCityWeather.cityName}}</div>
+    <div class="favorite-item-temp">{{favoriteCityWeather.temperature | temperature | async}}&#176;</div>
+    <div class="favorite-item-weatherText">{{favoriteCityWeather.text}}</div>
+  </mat-card>
+</a>

@@ -1,0 +1,105 @@
+.search-result-card {
+  background-color: inherit;
+  padding: 2rem;
+  width: 70vw;
+
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  grid-template-rows: 0.3fr 0.62fr 1fr 1fr 0.8fr 2fr;
+
+  grid-template-areas:
+    'weatherIcon city fabs'
+    'weatherIcon temperature .'
+    '. . .'
+    'weatherText weatherText weatherText'
+    '. . .'
+    'forecast forecast forecast';
+}
+
+.search-result-weatherIcon {
+  grid-area: weatherIcon;
+  width: 100%;
+  height: auto;
+}
+
+.search-result-cityName {
+  grid-area: city;
+  align-self: center;
+  font-size: 2.5em;
+}
+
+.search-result-temp {
+  grid-area: temperature;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 5em;
+}
+
+.search-result-temp-type {
+  color: grey;
+  font-size: 0.6em;
+  padding-top: 1.4rem;
+}
+
+.search-result-fabs {
+  grid-area: fabs;
+  justify-self: end;
+}
+
+.search-result-button-temp {
+  margin-right: 0.3rem;
+}
+
+.search-result-fab-temp {
+  font-size: large;
+}
+
+.search-result-weatherText {
+  grid-area: weatherText;
+  font-size: 4em;
+  text-align: center;
+  align-self: center;
+}
+
+.search-result-forecast {
+  grid-area: forecast;
+}
+
+@media screen and (max-width: 970px) {
+  .search-result-card {
+    width: 80vw;
+    padding: 1rem;
+
+    display: grid;
+    grid-template-columns: 0.6fr 0.1fr 1fr;
+    grid-template-rows: repeat(5, 0.1fr);
+    grid-row-gap: 1.5rem;
+    grid-template-areas:
+    '. . fabs'
+    'weatherIcon . city'
+    'weatherIcon . temperature'
+    'weatherText weatherText weatherText'
+    'forecast forecast forecast'
+  }
+
+  .search-result-cityName {
+    font-size: 2em;
+  }
+
+  .search-result-temp {
+    font-size: 3em;
+  }
+
+  .search-result-temp-type {
+    font-size: 0.6em;
+    padding-top: 0.9rem;
+  }
+
+  .search-result-weatherText {
+    display: flex;
+    flex-wrap: wrap;
+    justify-self: center;
+    font-size: 2em;
+  }
+}

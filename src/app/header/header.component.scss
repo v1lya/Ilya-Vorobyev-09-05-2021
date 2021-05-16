@@ -1,0 +1,34 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.header-brand {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand {
+  padding: 0 1.5rem;
+  color: white;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.header-items {
+  display: flex;
+  margin-left: auto;
+}
+
+.header-item {
+  font-size: 1.5em;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 970px) {
+  .brand, .header-item {
+    font-size: 1.3em;
+  }
+}

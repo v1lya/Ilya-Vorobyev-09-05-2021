@@ -1,0 +1,18 @@
+<form [formGroup]="searchForm" class="search-form">
+  <mat-form-field appearance="outline" class="search-field">
+    <mat-label>search</mat-label>
+    <mat-icon matPrefix>search</mat-icon>
+    <input
+      [errorStateMatcher]="matcher" [matAutocomplete]="auto"
+      formControlName="searchField" matInput
+      placeholder="Ramat Gan" type="text" (focusin)="clearSearchField()">
+    <mat-error>Please type only in English</mat-error>
+    <mat-autocomplete
+      #auto="matAutocomplete" (optionSelected)="onSelectCity($event)"
+      [displayWith]="displayFn" autoActiveFirstOption>
+      <mat-option *ngFor="let option of searchedOptions | async" [value]="option">
+        {{option.LocalizedName}}, {{option.AdministrativeArea.LocalizedName}}, {{option.Country.ID}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

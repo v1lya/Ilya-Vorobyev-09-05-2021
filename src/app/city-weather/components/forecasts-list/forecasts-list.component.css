@@ -1,0 +1,14 @@
+.forecasts-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+  grid-gap: 2rem;
+}
+
+@media screen and (max-width: 970px) {
+  .forecasts-list {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=forecasts-list.component.css.map */

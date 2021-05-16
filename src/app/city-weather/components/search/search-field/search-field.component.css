@@ -1,0 +1,17 @@
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-field {
+  width: 70vw;
+}
+
+@media screen and (max-width: 970px) {
+  .search-field {
+    width: 80vw;
+  }
+}
+
+/*# sourceMappingURL=search-field.component.css.map */
